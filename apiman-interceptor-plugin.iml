@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_5" inherit-compiler-output="false">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/src/main/resources" type="java-resource" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: io.apiman:apiman-gateway-engine-core:1.2.0.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: io.apiman:apiman-common-util:1.2.0.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: io.apiman:apiman-common-plugin:1.2.0.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: io.apiman:apiman-gateway-engine-beans:1.2.0.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: commons-io:commons-io:2.1" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: joda-time:joda-time:1.6.2" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.zaxxer:HikariCP:2.4.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.slf4j:slf4j-api:1.7.12" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: com.unboundid:unboundid-ldapsdk:3.0.0" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: io.apiman:apiman-gateway-engine-policies:1.2.0.Final" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: commons-codec:commons-codec:1.4" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: commons-lang:commons-lang:2.6" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.codehaus.jackson:jackson-core-asl:1.9.9" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: org.codehaus.jackson:jackson-mapper-asl:1.9.9" level="project" />
+  </component>
+</module>

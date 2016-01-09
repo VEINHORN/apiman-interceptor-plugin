@@ -1,0 +1,6 @@
+{
+  "frameworkVersion": 1.0,
+  "name": "Apiman Interceptor Plugin",
+  "description": "This plugin intercepts http requests and change some data",
+  "version": "${project.version}"
+}
