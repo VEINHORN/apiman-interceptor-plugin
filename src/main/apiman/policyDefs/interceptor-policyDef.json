@@ -1,0 +1,8 @@
+{
+  "id": "interceptor-policy",
+  "name": "Interceptor Policy",
+  "description": "A policy used to intercept and replace some data in http packets.",
+  "policyImpl": "plugin:${project.groupId}:${project.artifactId}:${project.version}:${project.packaging}/com.veinhorn.plugins.interceptor.TestPolicy",
+  "icon": "document",
+  "formType": "Default"
+}
