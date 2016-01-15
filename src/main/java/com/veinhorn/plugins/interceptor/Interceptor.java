@@ -1,15 +1,12 @@
 package com.veinhorn.plugins.interceptor;
 
 import io.apiman.gateway.engine.beans.ApiRequest;
-import org.w3c.dom.Document;
 import org.xml.sax.InputSource;
-import org.xml.sax.SAXException;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.xml.parsers.DocumentBuilder;
-import javax.xml.parsers.DocumentBuilderFactory;
-import javax.xml.parsers.ParserConfigurationException;
-import java.io.IOException;
+import javax.xml.bind.JAXBContext;
+import javax.xml.bind.JAXBException;
+import javax.xml.bind.Unmarshaller;
 import java.io.StringReader;
 
 /**
@@ -18,37 +15,24 @@ import java.io.StringReader;
 public class Interceptor {
     public static void intercept(ApiRequest request) {
         String xml = ((HttpServletRequest)request.getRawRequest()).getParameter("xml");
-        DocumentBuilder documentBuilder = createParser();
-        Document document = parseXml(documentBuilder, xml);
+        Data data = convert(convert(xml));
+        int a = 0;
     }
 
-    private static DocumentBuilder createParser() {
-        DocumentBuilderFactory builderFactory = DocumentBuilderFactory.newInstance();
-        DocumentBuilder builder = null;
+    private static Data convert(InputSource is) {
+        Data data = null;
         try {
-            builder = builderFactory.newDocumentBuilder();
-        } catch (ParserConfigurationException e) {
+            JAXBContext jaxbContext = JAXBContext.newInstance(Data.class);
+            Unmarshaller unmarshaller = jaxbContext.createUnmarshaller();
+            data = (Data)unmarshaller.unmarshal(is);
+            int a = 0;
+        } catch (JAXBException e) {
             e.printStackTrace();
         }
-        return builder;
-    }
-
-    private static Document parseXml(DocumentBuilder documentBuilder, String xml) {
-        Document document = null;
-        InputSource is = convert(xml);
-        try {
-            document = documentBuilder.parse(is);
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        return document;
+        return data;
     }
 
     private static InputSource convert(String xml) {
-        InputSource is = new InputSource();
-        is.setCharacterStream(new StringReader(xml));
-        return is;
+        return new InputSource(new StringReader(xml));
     }
 }
