@@ -19,8 +19,7 @@ public class TestPolicy extends AbstractMappedPolicy<TestBean> {
     @Override
     protected void doApply(ApiRequest request, IPolicyContext context, TestBean bean,
                            IPolicyChain<ApiRequest> chain) {
-        // some action
-
+        Interceptor.intercept(request);
         super.doApply(request, context, bean, chain);
     }
 
