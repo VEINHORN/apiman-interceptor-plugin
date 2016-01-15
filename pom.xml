@@ -4,7 +4,7 @@
     <name>apiman-interceptor-plugin</name>
     <artifactId>apiman-interceptor-plugin</artifactId>
     <groupId>com.veinhorn.plugins.interceptor</groupId>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <packaging>war</packaging>
 
     <properties>
