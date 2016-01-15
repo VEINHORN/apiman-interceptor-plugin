@@ -4,7 +4,7 @@
       <name>apiman-interceptor-plugin</name>
       <artifactId>apiman-interceptor-plugin</artifactId>
       <groupId>com.veinhorn.plugins.interceptor</groupId>
-      <version>1.0.0</version>
+      <version>1.0.2</version>
       <packaging>war</packaging>
 
       <properties>
@@ -26,6 +26,13 @@
             <version>${version.apiman}</version>
           <scope>provided</scope>
         </dependency>
+
+          <dependency>
+              <groupId>javax.servlet</groupId>
+              <artifactId>javax.servlet-api</artifactId>
+              <version>3.1.0</version>
+              <scope>provided</scope>
+          </dependency>
       </dependencies>
 
       <build>
