@@ -1,3 +1,4 @@
 .idea/
 target/
 apiman-interceptor-plugin.iml
+simple-service/node_modules/
